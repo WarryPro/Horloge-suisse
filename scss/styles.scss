@@ -1,0 +1,35 @@
+html {
+    box-sizing: border-box;
+}
+*, *:before, :after {
+    box-sizing: inherit;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    background: #222222;
+}
+
+.horloge {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    margin: auto;
+    background: #fff;
+    border-radius: 50%;
+}
+
+.heure-minutes {
+    position: absolute;
+    width: 2em;
+    height: 2em;    
+    left: calc(50% - 1em);
+    top: 1em;
+}
+
+@for $i from 1 through 12 {
+    .heure-minutes:nth-child(#{$i}) {
+        transform: rotate(#{$i * 30}deg);  
+    }
+}
