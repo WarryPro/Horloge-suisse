@@ -29,15 +29,29 @@ body {
     transform-origin: center calc(250px - 1em);
 }
 
+.heure {
+    top: 0.3em;
+    font-size: 2em;
+    transform-origin: center calc(250px - 0.3em);
+}
+
 span {
     display: block;
-    width: 1em;
-    height: 1em;
-    transform: rotate(-#{$i * 6}deg); 
+    width: 2em;
+    height: 2em;
+    text-align: center;
 }
 
 @for $i from 1 through 60 {
     .heure-minutes:nth-child(#{$i}) {
-        transform: rotate(#{$i * 6}deg);  
+        transform: rotate(#{$i * 6}deg);
     }
 }
+
+// .aiguille {
+//     width: 1em;
+//     height: 200px;
+//     position: absolute;
+//     // background: red;
+//     left: 249px;
+// }
