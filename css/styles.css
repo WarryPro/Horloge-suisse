@@ -29,6 +29,7 @@ body {
   top: 0.3em;
   font-size: 2em;
   font-weight: bold;
+  -webkit-text-stroke-width: 5px;
   transform-origin: center calc(250px - 0.3em); }
 
 span {
@@ -221,24 +222,54 @@ span {
   width: 0.5em;
   height: 200px;
   position: absolute;
-  background: red;
-  left: 246px;
-  top: 50px;
+  background: black;
   transform-origin: center bottom; }
   .aiguille.secondes {
-    animation: secondes 60s infinite linear; }
+    width: 0.3em;
+    background: red;
+    animation: secondes 60s infinite linear;
+    transform-origin: center 80%;
+    top: 90px;
+    left: 248px; }
+    .aiguille.secondes.secondes::before {
+      content: "";
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      top: -40px;
+      left: -20px;
+      background: inherit;
+      border-radius: 50%; }
 
 @keyframes secondes {
   to {
     transform: rotate(1turn); } }
   .aiguille.minutes {
-    animation: minutes 3600s infinite linear; }
+    width: 0.7em;
+    height: 240px;
+    top: 10px;
+    left: 246px;
+    animation: minutes 3600s infinite linear;
+    z-index: 10; }
+    .aiguille.minutes.minutes::before {
+      content: "";
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      top: 220px;
+      left: -17px;
+      background: #222222;
+      border-radius: 50%; }
 
 @keyframes minutes {
   to {
     transform: rotate(1turn); } }
   .aiguille.heures {
-    animation: heures 12960000s infinite linear; }
+    width: 1em;
+    height: 150px;
+    top: 100px;
+    left: 242px;
+    animation: heures 43200s infinite linear; }
 
 @keyframes heures {
   to {
