@@ -7,7 +7,7 @@ html {
 body {
   display: flex;
   min-height: 100vh;
-  background: #222222; }
+  background: #fff; }
 
 .horloge {
   position: relative;
@@ -15,7 +15,8 @@ body {
   height: 500px;
   margin: auto;
   background: #fff;
-  border-radius: 50%; }
+  border-radius: 50%;
+  box-shadow: 0 0 0 15px #222222; }
 
 .heure, .heure-minutes {
   position: absolute;
