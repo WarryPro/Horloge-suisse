@@ -247,8 +247,8 @@ span {
     transform: rotate(1turn); } }
   .aiguille.minutes {
     width: 0.7em;
-    height: 240px;
-    top: 10px;
+    height: 235px;
+    top: 15px;
     left: 246px;
     animation: minutes 3600s infinite linear;
     z-index: 10; }
