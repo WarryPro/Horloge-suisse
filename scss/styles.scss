@@ -23,7 +23,7 @@ body {
 .heure, .heure-minutes {
     position: absolute;
     width: 2em;
-    height: 2em;    
+    height: 1em;    
     left: calc(50% - 1em);
     top: 1em;
     transform-origin: center calc(250px - 1em);
@@ -32,13 +32,14 @@ body {
 .heure {
     top: 0.3em;
     font-size: 2em;
+    font-weight: bold;
     transform-origin: center calc(250px - 0.3em);
 }
 
 span {
     display: block;
     width: 2em;
-    height: 2em;
+    height: 1em;
     text-align: center;
 }
 
@@ -48,10 +49,40 @@ span {
     }
 }
 
-// .aiguille {
-//     width: 1em;
-//     height: 200px;
-//     position: absolute;
-//     // background: red;
-//     left: 249px;
-// }
+.aiguille {
+    width: 0.5em;
+    height: 200px;
+    position: absolute;
+    background: red;
+    left: 246px;
+    top: 50px;
+    transform-origin: center bottom;
+
+    &.secondes {
+        animation: secondes 60s infinite linear;
+    }
+
+    @keyframes secondes {
+        to {
+            transform: rotate(1turn);
+        }
+    }
+
+    &.minutes {
+        animation: minutes 3600s infinite linear;
+    }
+    @keyframes minutes {
+        to {
+            transform: rotate(1turn);
+        }
+    }
+
+    &.heures {
+        animation: heures 12960000s infinite linear;
+    }
+    @keyframes heures {
+        to {
+            transform: rotate(1turn);
+        }
+    }
+}
