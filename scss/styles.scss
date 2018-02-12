@@ -19,6 +19,16 @@ body {
     background: #fff;
     border-radius: 50%;
     box-shadow: 0 0 0 15px #222222;
+
+    &.horloge:before {
+        content: "";
+        background: url(../img/logo-cff.png) no-repeat center / 100%;
+        width: 260px;
+        height: 150px;
+        position: absolute;
+        top: 50px;
+        left: 120px;
+    }
 }
 
 .heure, .heure-minutes {
